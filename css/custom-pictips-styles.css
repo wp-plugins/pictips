@@ -1,0 +1,44 @@
+/**
+* put your custom styles in here - copy a style and make it your own
+*/
+  .normalstyle {
+    /*
+    IE and FF do not support fetching shorthand values in jQuery
+     so top has been used as an identfier only
+     should be read as without top */
+
+    /* currently ignored */
+    border-top-style: solid;
+    /*I only understand width in pixels between 1-10 */
+    border-top-width: 2px;
+    /* any css valid colour */
+    border-top-color: black;
+    /*any padding to be applied between bubble and image */
+    padding-top: 4px;
+    /* any css valid colour */
+    background-color: white;
+    /* this is not used for margin-top but for border-radius (radius property get support is buggy for IE/FF) */
+    /* border-radius - any value*/
+    margin-top: 5px;
+    /*I must be hidden*/
+    display: none;
+    
+  }
+
+  .style2 {
+    /* currently ignored */
+    border-top-style: solid;
+    /*I only understand width in pixels between 1-10 */
+    border-top-width: 2px;
+    /* any css valid colour */
+    border-top-color: black;
+    /*any padding to be applied between bubble and image */
+    padding-top: 8px;
+    /* any css valid colour */
+    background-color: white;
+    /* this is not used for margin-top but for border-radius (radius property get support is buggy for IE/FF) */
+    /* border-radius */
+    margin-top: 5px;
+    /*I must be hidden*/
+    display: none;
+  }

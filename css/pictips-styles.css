@@ -1,0 +1,37 @@
+/**
+* pictips styles
+*/
+
+.pictips {
+    display:inline ;
+  }
+
+.picTipBubble {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background: gray;
+	border: solid black 1px;
+	color: white;
+	padding: 10px;
+	left: -999em;
+	z-index: 9999;     
+}
+
+.tip {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border-width: 10px;
+	border-style: solid;
+}
+
+
+
+.tipindent {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border-width: 9px;
+	border-style: solid;
+}
