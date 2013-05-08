@@ -25,7 +25,7 @@
     
   }
 
-  .style2 {
+  .normalpadded {
     /* currently ignored */
     border-top-style: solid;
     /*I only understand width in pixels between 1-10 */
@@ -42,3 +42,4 @@
     /*I must be hidden*/
     display: none;
   }
+

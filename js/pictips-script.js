@@ -24,11 +24,21 @@ function RenderPictip(tipid){
   var bubble = AppendBubble(pictip_src, pictip_id);
   AddStyle(style);
   var pictip_img_element = $('#pictips-src' + pictip_id);
+
+
+  //preload the image and swap in when done
+  var img = new Image();
+  img.src = pictip_src;
+  $(img).load(function() {
+      pictip_img_element.prop('src', pictip_src);
+  });
+
+   
   
 
   ResizeBubbleElement(bubble, pictip_img_element);
 
-  pictip_img_element.load();
+  
   
   anchor.hover ( 
         function(){
@@ -40,6 +50,7 @@ function RenderPictip(tipid){
         });
   
 }
+
 
 //add the styles so these can be accessed later
 function AddStyle(style){
@@ -66,18 +77,39 @@ function ResizeBubbleElement(element_to_resize, element_to_resize_to){
 
 //apend the bubble so we can position it later, return the element
 function AppendBubble(pictip_src, id){
- var bubble_id = id
+ loading_image_src = UrlOfPicTipsDir('js/pictips-script.js') + "img/imageloading.png";
+
+ var bubble_id = id;
  var bubble_html = "";
  bubble_html += "<div class='picTipBubble' id='bubble"+bubble_id+"'>";
  bubble_html += "     <div class='tip' id='bubbletip"+bubble_id+"'></div>";
  bubble_html += "     <div class='tipindent' id='bubbletipindent"+bubble_id+"'></div>";
- bubble_html += "     <img src='"+pictip_src+"' id='pictips-src"+bubble_id+"' alt = 'alt tag'>";
+ bubble_html += "     <img src='"+loading_image_src+"' id='pictips-src"+bubble_id+"' alt = 'alt tag'>";
  bubble_html += "</div>";
  $(document.body).append(bubble_html);
 
 
 
  return $("#bubble"+bubble_id);
+}
+
+
+
+function UrlOfPicTipsDir ( root_file ) {
+ 
+    var scriptElements = document.getElementsByTagName('script');
+    var i, element, file_name;
+ 
+        for( i = 0; element = scriptElements[i]; i++ ) {
+ 
+            file_name = element.src;
+ 
+            if( file_name.indexOf( root_file ) >= 0 ) {
+                var pictips_dir = file_name.substring( 0, file_name.indexOf( root_file ) );
+ 
+            }
+        }
+    return pictips_dir;
 }
 
 //position a bubble over an anchor element, hide it and add a hover event to display it

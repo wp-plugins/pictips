@@ -1,0 +1,36 @@
+/**
+* styles for the post dialog
+*/
+
+#pictips-options-dialog {
+	margin: 5px;
+}
+
+#pictips-options-dialog span {
+
+	width: 100px;
+	float: left;
+
+}
+
+
+#pictips-options-dialog input[type="text"] {
+	width: 250px;
+}
+
+ 
+/**
+* styles for the admin screen
+*/
+.eightmc-box-left{
+	width: 65%;
+	display: block;
+	float: left;
+	padding-right: 15px;	
+}
+
+.eightmc-box-right {
+	width: 25%;
+	display: block;
+	float: left;
+}
